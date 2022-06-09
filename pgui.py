@@ -9,7 +9,6 @@ comments:
 from tkinter import *
 from tkinter.ttk import *  # defaults all widgets as ttk
 import os, sys
-from tkinter.font import Font
 import time
 import pyautogui
 from ttkthemes import ThemedTk  # ttkthemes is applied to all widgets
