@@ -8,7 +8,7 @@ comments:
 '''
 from tkinter import *
 from tkinter.ttk import *  # defaults all widgets as ttk
-import os, sys
+import os
 import time
 import pyautogui
 from ttkthemes import ThemedTk  # ttkthemes is applied to all widgets
