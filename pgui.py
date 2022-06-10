@@ -60,8 +60,7 @@ class Application(Frame):
         self.vlbl_screen.set(f"Screen: {SCREEN_WIDTH}x{SCREEN_HEIGHT}")
         self.vlbl_position.set(f"Mouse: x={MOUSE_X} y={MOUSE_Y}")
         self.vent_color.set(f"Color: {HEXCOLOR}")
-        self.style.configure("TEntry", background=HEXCOLOR,
-                             foreground=HEXCOLOR)
+        self.style.configure("TEntry", background=HEXCOLOR)
 
 
 root = ThemedTk(theme="scidblue")
