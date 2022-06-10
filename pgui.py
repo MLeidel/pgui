@@ -23,24 +23,24 @@ class Application(Frame):
     def create_widgets(self):
         ''' creates GUI for app '''
         self.style = Style()
-
-        root.geometry("170x75")
+        root.geometry("200x75")
 
         self.vlbl_screen = StringVar()
         lbl_screen = Label(self, text='', textvariable=self.vlbl_screen)
-        lbl_screen.grid(row=1, column=1, sticky='ew')
+        lbl_screen.grid(row=1, column=1, sticky='', padx=6)
 
         self.vlbl_position = StringVar()
         lbl_position = Label(self, text='', textvariable=self.vlbl_position)
-        lbl_position.grid(row=2, column=1, sticky='ew')
+        lbl_position.grid(row=2, column=1, sticky='', padx=6)
 
         self.vent_color = StringVar()
         self.ent_color = Entry(self, textvariable=self.vent_color)
-        self.ent_color.grid(row=3, column=1, sticky='ew')
+        self.ent_color.grid(row=3, column=1, sticky='', padx=6)
 
         self.process_position()
         root.bind("<Return>", self.process_position)
 
+        self.columnconfigure(1, weight=1)
 
     def rgb_to_hex(self, rgb):
         return '%02x%02x%02x' % rgb
@@ -69,7 +69,7 @@ p = os.path.realpath(__file__)
 os.chdir(os.path.dirname(p))
 
 root.title("pgui")
-root.resizable(0, 0) # no resize & removes maximize button
+#root.resizable(0, 0) # no resize & removes maximize button
 root.attributes("-topmost", True)  # Keep on top of other windows
 app = Application(root)
 app.mainloop()
