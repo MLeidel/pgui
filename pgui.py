@@ -34,7 +34,8 @@ class Application(Frame):
         lbl_position.grid(row=2, column=1, sticky='', padx=6)
 
         self.vent_color = StringVar()
-        self.ent_color = Entry(self, textvariable=self.vent_color)
+        self.ent_color = Entry(self, textvariable=self.vent_color,
+                               justify='center')
         self.ent_color.grid(row=3, column=1, sticky='', padx=6)
 
         self.process_position()
@@ -59,7 +60,8 @@ class Application(Frame):
         self.vlbl_screen.set(f"Screen: {SCREEN_WIDTH}x{SCREEN_HEIGHT}")
         self.vlbl_position.set(f"Mouse: x={MOUSE_X} y={MOUSE_Y}")
         self.vent_color.set(f"Color: {HEXCOLOR}")
-        self.style.configure("TEntry", background=HEXCOLOR) # global
+        self.style.configure("TEntry", background=HEXCOLOR,
+                             foreground=HEXCOLOR)
 
 
 root = ThemedTk(theme="scidblue")
