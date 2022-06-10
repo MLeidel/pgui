@@ -1,5 +1,5 @@
 # pgui
-GUI - displays mouse position and color at pointer on screen
+GUI - displays mouse position on screen and screen color under pointer
 
 ## Modules
 tkinter.ttk  
